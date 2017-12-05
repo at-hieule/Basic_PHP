@@ -13,7 +13,12 @@ Có 3 trạng thái chính trên 1 file là: committed, modified và staged.
 +	Commit nghĩa là một hành động để Git lưu lại một bản chụp (snapshot) của các sự thay đổi trong thư mục làm việc, và các tập tin và thư mục được thay đổi đã phải nằm trong Staging Area. ) của các sự thay đổi trong thư mục làm việc, và các tập tin và thư mục được thay đổi đã phải nằm trong Staging Area.
 +	Modified nghĩa là thay đổi tập tin mà chưa có hành động commit.
 +	Staged nghĩa là đánh dấu một thay đổi tập tin trong phiên bản hiện tại của nó để đưa vào commit snapshot.
-Để commit một tập tin ta cần quan tam 2 trạng thái: track và untrack Tracked – Là tập tin đã được đánh dấu theo dõi trong Git để bạn làm việc với nó. Và trạng thái Tracked nó sẽ có thêm các trạng thái phụ khác là Unmodified (chưa chỉnh sửa gì), Modified (đã chỉnh sửa) và Staged (đã sẵn sàng để commit). Untracked – Là tập tin còn lại mà bạn sẽ không muốn làm việc với nó trong Git.
+Để commit một tập tin ta cần quan tam 2 trạng thái: track và untrack 
+Tracked
+ – Là tập tin đã được đánh dấu theo dõi trong Git để bạn làm việc với nó. 
+Và trạng thái Tracked nó sẽ có thêm các trạng thái phụ khác là Unmodified (chưa chỉnh sửa gì), Modified (đã chỉnh sửa) và Staged (đã sẵn sàng để commit).
+ Untracked
+ – Là tập tin còn lại mà bạn sẽ không muốn làm việc với nó trong Git.
 Thực hiện các lệnh tại các trạng thái trên:
 Kiểm tra trạng thái hiện tại của git:	git status
 Commit thay đổi : git commit or git commit -m “message”
@@ -26,4 +31,6 @@ Git fetch	git fetch origin
 Git pull	git pull origin master
 Git diff: Để biết chính xác các thay đổi trong các file và sự thay thay đổi của các file trong folder git diff tenfile	//So sánh trong file git diff //so sánh tất cả các file
 GitIgnore: Là 1 file ghi lại những thay đổi, những file mà không được đưa lên git.
-Git stash: Git stash được sử dụng khi muốn lưu lại các thay đổi chưa commit, thường rất hữu dụng khi mình muốn đổi sang 1 branch khác mà lại đang làm dở ở branch hiện tại. Muốn lưu toàn bộ nội dung công việc đang làm dở, mình có thể sử dụng: git stash Sau khi đã git stash 1 hoặc vài lần, mình có thể xem lại danh sách các lần lưu thay đổi bằng câu lệnh: git stash list Muốn lấy lại thay đổi và xoá nội dung thay đổi lưu trong stack đi, khi đó: git stash pop stash{1}
+Git stash: Git stash được sử dụng khi muốn lưu lại các thay đổi chưa commit, thường rất hữu dụng khi mình muốn đổi sang 1 branch khác mà lại đang làm dở ở branch hiện tại. Muốn lưu toàn bộ nội dung công việc đang làm dở, mình có thể sử dụng: git stash 
+Sau khi đã git stash 1 hoặc vài lần, mình có thể xem lại danh sách các lần lưu thay đổi bằng câu lệnh: git stash list 
+Muốn lấy lại thay đổi và xoá nội dung thay đổi lưu trong stack đi, khi đó: git stash pop stash{1}
